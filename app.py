@@ -1,10 +1,10 @@
 import streamlit as st
-import tensorflow as tf
+import joblib
 import numpy as np
 from PIL import Image
 
 # Load the trained model
-model = tf.keras.models.load_model('digit_recognition_model.h5')
+model = joblib.load('my_model.joblib')
 
 # Function to preprocess image
 def preprocess_image(image):
